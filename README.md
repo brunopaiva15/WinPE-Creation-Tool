@@ -14,11 +14,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Importation
 
-To get started, download the project on GitHub. Unzip the folder somewhere on your computer. Then open the "Redows.sln" file with Visual Studio 2017. There you go. The project is open and you can edit it at your convenience.
+To get started, download the project on GitHub. Unzip the folder somewhere on your computer. Then open the "WinPE_Creation_Tool.sln" file with Visual Studio 2017. There you go. The project is open and you can edit it at your convenience.
 
 ## Deployment
 
-To deploy and test the application, navigate to the folder /Redows/bin/Debug/ and launch "Redows.exe".
+To deploy and test the application, navigate to the folder /Redows/bin/Debug/ and launch "WinPE_Creation_Tool.exe".
 
 ## Authors
 
