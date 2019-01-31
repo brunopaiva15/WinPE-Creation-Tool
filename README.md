@@ -9,6 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 - Windows 10
+- Windows ADK
 - Visual Studio 2017
 
 ### Importation
