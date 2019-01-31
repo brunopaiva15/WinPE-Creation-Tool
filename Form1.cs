@@ -468,5 +468,14 @@ namespace WinPE_Creation_Tool
         {
             MessageBox.Show("Windows Language Code Identifier. For example : fr-FR, en-US, de-DE...");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Wizard wizard = new Wizard();
+
+            this.Hide();
+
+            wizard.ShowDialog();
+        }
     }
 }

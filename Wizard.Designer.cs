@@ -19,7 +19,7 @@
 
 namespace WinPE_Creation_Tool
 {
-    partial class easy
+    partial class Wizard
     {
         /// <summary>
         /// Required designer variable.
@@ -57,23 +57,28 @@ namespace WinPE_Creation_Tool
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cbxUSB = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxCreateUSB = new System.Windows.Forms.CheckBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cbxGenerateISO = new System.Windows.Forms.CheckBox();
+            this.btnGo = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 18);
+            this.label2.Location = new System.Drawing.Point(27, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 31);
+            this.label2.Size = new System.Drawing.Size(183, 31);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Easy mode";
+            this.label2.Text = "Wizard mode";
             // 
             // rbAMD64
             // 
@@ -161,13 +166,22 @@ namespace WinPE_Creation_Tool
             // 
             this.groupBox3.Controls.Add(this.cbxUSB);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.cbxCreateUSB);
             this.groupBox3.Location = new System.Drawing.Point(12, 237);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 78);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "USB";
+            // 
+            // cbxUSB
+            // 
+            this.cbxUSB.FormattingEnabled = true;
+            this.cbxUSB.Location = new System.Drawing.Point(50, 38);
+            this.cbxUSB.Name = "cbxUSB";
+            this.cbxUSB.Size = new System.Drawing.Size(130, 21);
+            this.cbxUSB.TabIndex = 14;
+            this.cbxUSB.DropDown += new System.EventHandler(this.cbxUSB_DropDown);
             // 
             // label1
             // 
@@ -178,41 +192,85 @@ namespace WinPE_Creation_Tool
             this.label1.TabIndex = 13;
             this.label1.Text = "USB :";
             // 
-            // checkBox1
+            // cbxCreateUSB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 21);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(126, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Create bootable USB";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbxCreateUSB.AutoSize = true;
+            this.cbxCreateUSB.Location = new System.Drawing.Point(12, 21);
+            this.cbxCreateUSB.Name = "cbxCreateUSB";
+            this.cbxCreateUSB.Size = new System.Drawing.Size(126, 17);
+            this.cbxCreateUSB.TabIndex = 0;
+            this.cbxCreateUSB.Text = "Create bootable USB";
+            this.cbxCreateUSB.UseVisualStyleBackColor = true;
             // 
-            // cbxUSB
+            // groupBox4
             // 
-            this.cbxUSB.FormattingEnabled = true;
-            this.cbxUSB.Location = new System.Drawing.Point(50, 38);
-            this.cbxUSB.Name = "cbxUSB";
-            this.cbxUSB.Size = new System.Drawing.Size(130, 21);
-            this.cbxUSB.TabIndex = 14;
+            this.groupBox4.Controls.Add(this.cbxGenerateISO);
+            this.groupBox4.Location = new System.Drawing.Point(12, 321);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 47);
+            this.groupBox4.TabIndex = 17;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "ISO";
             // 
-            // easy
+            // cbxGenerateISO
+            // 
+            this.cbxGenerateISO.AutoSize = true;
+            this.cbxGenerateISO.Location = new System.Drawing.Point(12, 19);
+            this.cbxGenerateISO.Name = "cbxGenerateISO";
+            this.cbxGenerateISO.Size = new System.Drawing.Size(91, 17);
+            this.cbxGenerateISO.TabIndex = 0;
+            this.cbxGenerateISO.Text = "Generate ISO";
+            this.cbxGenerateISO.UseVisualStyleBackColor = true;
+            // 
+            // btnGo
+            // 
+            this.btnGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGo.Location = new System.Drawing.Point(12, 384);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(200, 27);
+            this.btnGo.TabIndex = 18;
+            this.btnGo.Text = "GO";
+            this.btnGo.UseVisualStyleBackColor = true;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Location = new System.Drawing.Point(12, 417);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(32, 21);
+            this.btnReturn.TabIndex = 19;
+            this.btnReturn.Text = "<---";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Wizard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(229, 423);
+            this.ClientSize = new System.Drawing.Size(229, 448);
+            this.Controls.Add(this.btnReturn);
+            this.Controls.Add(this.btnGo);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Name = "easy";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "Wizard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WPECT";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Wizard_FormClosing);
+            this.Load += new System.EventHandler(this.Wizard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,8 +287,12 @@ namespace WinPE_Creation_Tool
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbxCreateUSB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxUSB;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.CheckBox cbxGenerateISO;
+        private System.Windows.Forms.Button btnGo;
+        private System.Windows.Forms.Button btnReturn;
     }
 }

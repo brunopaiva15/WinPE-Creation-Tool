@@ -50,11 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="easy.cs">
+    <Compile Include="Wizard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="easy.Designer.cs">
-      <DependentUpon>easy.cs</DependentUpon>
+    <Compile Include="Wizard.Designer.cs">
+      <DependentUpon>Wizard.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -64,8 +64,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="easy.resx">
-      <DependentUpon>easy.cs</DependentUpon>
+    <EmbeddedResource Include="Wizard.resx">
+      <DependentUpon>Wizard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
