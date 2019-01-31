@@ -1,4 +1,4 @@
-# WINPE Creation Tool
+# WinPE Creation Tool
 
 WinPE Creation Tool is a free and open source utility that allows you to create a complete WinPE environment, including a directory, an ISO and a bootable USB key.
 
@@ -30,4 +30,4 @@ This project is licensed under the GNU General Public License Version 3 - see th
 ## Download
 
 To download this project, naviguate to https://brunopaiva.ch/telechargements.
-Windows ADK must be installed on your computer : https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install
+Windows ADK must be installed on your computer : https://bit.ly/2JZlKYv
