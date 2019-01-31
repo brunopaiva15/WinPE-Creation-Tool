@@ -29,4 +29,5 @@ This project is licensed under the GNU General Public License Version 3 - see th
 
 ## Download
 
-To download this project, naviguate to https://brunopaiva.ch/telechargements. Windows ADK MUST be installed. https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install
+To download this project, naviguate to https://brunopaiva.ch/telechargements.
+Windows ADK MUST be installed : https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install
