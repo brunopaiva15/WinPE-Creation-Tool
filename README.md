@@ -26,3 +26,7 @@ To deploy and test the application, navigate to the folder /Redows/bin/Debug/ an
 ## License
 
 This project is licensed under the GNU General Public License Version 3 - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Download
+
+To download this project, naviguate to https://brunopaiva.ch/telechargements.
