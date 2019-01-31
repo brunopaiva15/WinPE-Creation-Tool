@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Windows 7, 8.1 ou 10
+- Windows 10
 - Visual Studio 2017
 
 ### Importation
