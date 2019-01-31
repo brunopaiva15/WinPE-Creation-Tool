@@ -29,5 +29,6 @@ This project is licensed under the GNU General Public License Version 3 - see th
 
 ## Download
 
-To download this project, naviguate to https://brunopaiva.ch/telechargements.
+Download this project : https://bit.ly/2BdCKYC
+
 Windows ADK must be installed on your computer : https://bit.ly/2JZlKYv
