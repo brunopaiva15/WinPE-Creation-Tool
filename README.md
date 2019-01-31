@@ -18,7 +18,7 @@ To get started, download the project on GitHub. Unzip the folder somewhere on yo
 
 ## Deployment
 
-To deploy and test the application, navigate to the folder /Redows/bin/Debug/ and launch "WinPE_Creation_Tool.exe".
+To deploy and test the application, navigate to the folder /WinPE_Creation_Tool/bin/Debug/ and launch "WinPE_Creation_Tool.exe".
 
 ## Authors
 
