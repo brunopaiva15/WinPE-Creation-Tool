@@ -25,4 +25,4 @@ To deploy and test the application, navigate to the folder /Redows/bin/Debug/ an
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU General Public License Version 3 - see the [LICENSE.md](LICENSE.md) file for details
