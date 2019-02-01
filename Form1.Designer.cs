@@ -213,7 +213,7 @@ namespace WinPE_Creation_Tool
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 14;
-            this.label6.Text = "v1.1";
+            this.label6.Text = "v0.2";
             // 
             // Form1
             // 
