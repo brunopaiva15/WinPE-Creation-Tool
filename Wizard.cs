@@ -392,5 +392,10 @@ namespace WinPE_Creation_Tool
                 }
             }
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Windows Language Code Identifier. For example : fr-FR, en-US, de-DE...");
+        }
     }
 }

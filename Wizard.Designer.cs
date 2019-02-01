@@ -137,6 +137,7 @@ namespace WinPE_Creation_Tool
             this.btnHelp.TabIndex = 12;
             this.btnHelp.Text = "?";
             this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // groupBox1
             // 
