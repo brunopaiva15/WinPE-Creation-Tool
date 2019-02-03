@@ -205,14 +205,14 @@ namespace WinPE_Creation_Tool
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 14;
-            this.label6.Text = "v0.3";
+            this.label6.Text = "v0.4";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WinPE_Creation_Tool.Properties.Resources.IMG_4501;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 14);
+            this.pictureBox1.Image = global::WinPE_Creation_Tool.Properties.Resources.image;
+            this.pictureBox1.Location = new System.Drawing.Point(51, 69);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(133, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;

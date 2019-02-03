@@ -250,10 +250,10 @@ namespace WinPE_Creation_Tool
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WinPE_Creation_Tool.Properties.Resources.IMG_4501;
-            this.pictureBox1.Location = new System.Drawing.Point(26, -35);
+            this.pictureBox1.Image = global::WinPE_Creation_Tool.Properties.Resources.image;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(133, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -263,6 +263,7 @@ namespace WinPE_Creation_Tool
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(229, 471);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnGo);
             this.Controls.Add(this.groupBox4);
@@ -270,7 +271,6 @@ namespace WinPE_Creation_Tool
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
