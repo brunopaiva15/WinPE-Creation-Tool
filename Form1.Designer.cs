@@ -47,6 +47,7 @@ namespace WinPE_Creation_Tool
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenererPE = new System.Windows.Forms.Button();
             this.btnGenererISO = new System.Windows.Forms.Button();
@@ -59,9 +60,10 @@ namespace WinPE_Creation_Tool
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnHelp = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnWizard = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +79,7 @@ namespace WinPE_Creation_Tool
             // btnGenererPE
             // 
             this.btnGenererPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenererPE.Location = new System.Drawing.Point(43, 121);
+            this.btnGenererPE.Location = new System.Drawing.Point(43, 182);
             this.btnGenererPE.Name = "btnGenererPE";
             this.btnGenererPE.Size = new System.Drawing.Size(157, 30);
             this.btnGenererPE.TabIndex = 1;
@@ -88,7 +90,7 @@ namespace WinPE_Creation_Tool
             // btnGenererISO
             // 
             this.btnGenererISO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenererISO.Location = new System.Drawing.Point(43, 157);
+            this.btnGenererISO.Location = new System.Drawing.Point(43, 218);
             this.btnGenererISO.Name = "btnGenererISO";
             this.btnGenererISO.Size = new System.Drawing.Size(157, 30);
             this.btnGenererISO.TabIndex = 2;
@@ -99,7 +101,7 @@ namespace WinPE_Creation_Tool
             // btnCreerCleBootable
             // 
             this.btnCreerCleBootable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreerCleBootable.Location = new System.Drawing.Point(43, 193);
+            this.btnCreerCleBootable.Location = new System.Drawing.Point(43, 254);
             this.btnCreerCleBootable.Name = "btnCreerCleBootable";
             this.btnCreerCleBootable.Size = new System.Drawing.Size(157, 30);
             this.btnCreerCleBootable.TabIndex = 3;
@@ -110,7 +112,7 @@ namespace WinPE_Creation_Tool
             // cbxUSB
             // 
             this.cbxUSB.FormattingEnabled = true;
-            this.cbxUSB.Location = new System.Drawing.Point(116, 229);
+            this.cbxUSB.Location = new System.Drawing.Point(116, 290);
             this.cbxUSB.Name = "cbxUSB";
             this.cbxUSB.Size = new System.Drawing.Size(84, 21);
             this.cbxUSB.TabIndex = 4;
@@ -124,7 +126,7 @@ namespace WinPE_Creation_Tool
             "amd64",
             "x86",
             "arm"});
-            this.cbxArchitecture.Location = new System.Drawing.Point(116, 94);
+            this.cbxArchitecture.Location = new System.Drawing.Point(116, 155);
             this.cbxArchitecture.Name = "cbxArchitecture";
             this.cbxArchitecture.Size = new System.Drawing.Size(84, 21);
             this.cbxArchitecture.TabIndex = 5;
@@ -132,7 +134,7 @@ namespace WinPE_Creation_Tool
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 97);
+            this.label2.Location = new System.Drawing.Point(40, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 6;
@@ -141,7 +143,7 @@ namespace WinPE_Creation_Tool
             // btnChangeLanguage
             // 
             this.btnChangeLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangeLanguage.Location = new System.Drawing.Point(43, 256);
+            this.btnChangeLanguage.Location = new System.Drawing.Point(43, 317);
             this.btnChangeLanguage.Name = "btnChangeLanguage";
             this.btnChangeLanguage.Size = new System.Drawing.Size(157, 30);
             this.btnChangeLanguage.TabIndex = 7;
@@ -151,7 +153,7 @@ namespace WinPE_Creation_Tool
             // 
             // tbxLCID
             // 
-            this.tbxLCID.Location = new System.Drawing.Point(118, 292);
+            this.tbxLCID.Location = new System.Drawing.Point(118, 353);
             this.tbxLCID.Name = "tbxLCID";
             this.tbxLCID.Size = new System.Drawing.Size(54, 20);
             this.tbxLCID.TabIndex = 8;
@@ -159,7 +161,7 @@ namespace WinPE_Creation_Tool
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 232);
+            this.label3.Location = new System.Drawing.Point(40, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 9;
@@ -168,7 +170,7 @@ namespace WinPE_Creation_Tool
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 295);
+            this.label4.Location = new System.Drawing.Point(42, 356);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 10;
@@ -176,7 +178,7 @@ namespace WinPE_Creation_Tool
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(177, 292);
+            this.btnHelp.Location = new System.Drawing.Point(177, 353);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(23, 20);
             this.btnHelp.TabIndex = 11;
@@ -184,24 +186,14 @@ namespace WinPE_Creation_Tool
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(35, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Free and open-source WinPE utility";
-            // 
             // btnWizard
             // 
             this.btnWizard.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWizard.Location = new System.Drawing.Point(64, 333);
+            this.btnWizard.Location = new System.Drawing.Point(64, 394);
             this.btnWizard.Name = "btnWizard";
             this.btnWizard.Size = new System.Drawing.Size(105, 30);
             this.btnWizard.TabIndex = 13;
-            this.btnWizard.Text = "WIZARD MODE";
+            this.btnWizard.Text = "EASY MODE";
             this.btnWizard.UseVisualStyleBackColor = true;
             this.btnWizard.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -209,20 +201,29 @@ namespace WinPE_Creation_Tool
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(99, 61);
+            this.label6.Location = new System.Drawing.Point(99, 46);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 14;
-            this.label6.Text = "v0.2";
+            this.label6.Text = "v0.3";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WinPE_Creation_Tool.Properties.Resources.IMG_4501;
+            this.pictureBox1.Location = new System.Drawing.Point(35, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 378);
+            this.ClientSize = new System.Drawing.Size(241, 440);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnWizard);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -235,13 +236,16 @@ namespace WinPE_Creation_Tool
             this.Controls.Add(this.btnGenererISO);
             this.Controls.Add(this.btnGenererPE);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WPECT";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,9 +265,9 @@ namespace WinPE_Creation_Tool
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnWizard;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
