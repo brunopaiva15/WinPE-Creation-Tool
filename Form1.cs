@@ -43,11 +43,12 @@ namespace WinPE_Creation_Tool
         {
             try
             {
+         
 
                 MessageBox.Show("Before using this utility, make sure you have the deployment tools and the WinPE pre-installation environment.\n\nNote : It's essential to have Windows 10 installed on this computer in order for this utility to work.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                //if (Directory.Exists(@"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit"))
-                //{
+                if (Directory.Exists(@"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit"))
+                {
                 cbxArchitecture.SelectedItem = "amd64";
 
                 ManagementObjectCollection drives = new ManagementObjectSearcher("SELECT Caption, DeviceID FROM Win32_DiskDrive WHERE InterfaceType='USB'").Get();
@@ -86,10 +87,10 @@ namespace WinPE_Creation_Tool
                         }
                     }
                 }
-            //}
-            //    else
-            //    {
-            //    MessageBox.Show(@"You need to install Windows ADK to use WinPE Creation Tool.\n\nhttps://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install");
+            }
+                else
+                {
+                 MessageBox.Show(@"WARNING. You need to install Windows ADK to use WinPE Creation Tool.\n\nhttps://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install");
 
             //    System.Diagnostics.Process[] process = System.Diagnostics.Process.GetProcessesByName("cmd");
             //    foreach (System.Diagnostics.Process p in process)
@@ -110,7 +111,7 @@ namespace WinPE_Creation_Tool
             //    }
 
             //    Process.GetCurrentProcess().Kill();
-            //}
+            }
         }
             catch
             {

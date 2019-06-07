@@ -136,27 +136,27 @@ namespace WinPE_Creation_Tool
                 }
                 else
                 {
-                    MessageBox.Show(@"You need to install Windows ADK to use WinPE Creation Tool.\n\nhttps://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install");
+                    MessageBox.Show(@"WARNING. You need to install Windows ADK to use WinPE Creation Tool.\n\nhttps://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install");
 
-                    System.Diagnostics.Process[] process = System.Diagnostics.Process.GetProcessesByName("cmd");
-                    foreach (System.Diagnostics.Process p in process)
-                    {
-                        if (!string.IsNullOrEmpty(p.ProcessName))
-                        {
-                            p.Kill();
-                        }
-                    }
+                    //System.Diagnostics.Process[] process = System.Diagnostics.Process.GetProcessesByName("cmd");
+                    //foreach (System.Diagnostics.Process p in process)
+                    //{
+                    //    if (!string.IsNullOrEmpty(p.ProcessName))
+                    //    {
+                    //        p.Kill();
+                    //    }
+                    //}
 
-                    System.Diagnostics.Process[] process1 = System.Diagnostics.Process.GetProcessesByName("Dism");
-                    foreach (System.Diagnostics.Process p in process1)
-                    {
-                        if (!string.IsNullOrEmpty(p.ProcessName))
-                        {
-                            p.Kill();
-                        }
-                    }
+                    //System.Diagnostics.Process[] process1 = System.Diagnostics.Process.GetProcessesByName("Dism");
+                    //foreach (System.Diagnostics.Process p in process1)
+                    //{
+                    //    if (!string.IsNullOrEmpty(p.ProcessName))
+                    //    {
+                    //        p.Kill();
+                    //    }
+                    //}
 
-                    Process.GetCurrentProcess().Kill();
+                    //Process.GetCurrentProcess().Kill();
                 }
             }
             catch
