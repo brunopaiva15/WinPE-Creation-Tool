@@ -90,7 +90,7 @@ namespace WinPE_Creation_Tool
             }
                 else
                 {
-                 MessageBox.Show(@"WARNING. You need to install Windows ADK to use WinPE Creation Tool.\n\nhttps://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install");
+                 MessageBox.Show(@"WARNING. You need to install Windows ADK to use WinPE Creation Tool. https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install");
 
             //    System.Diagnostics.Process[] process = System.Diagnostics.Process.GetProcessesByName("cmd");
             //    foreach (System.Diagnostics.Process p in process)
