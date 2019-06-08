@@ -155,19 +155,6 @@ namespace WinPE_Creation_Tool
                     Cursor.Current = Cursors.WaitCursor;
                     btnGo.Enabled = false;
 
-                    if (tbxLCID.Text != "" || cbxDrivers.Checked == true)
-                    {
-                        Process procOuvrirWIM = new Process();
-                        procOuvrirWIM.StartInfo.FileName = "cmd";
-                        procOuvrirWIM.StartInfo.Verb = "runas";
-                        procOuvrirWIM.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
-                        procOuvrirWIM.StartInfo.Arguments = @"/k Dism /Mount-Image /ImageFile:C:\WinPE_" + strChoosed + @"\media\sources\boot.wim /index:1 /MountDir:C:\WinPE_" + strChoosed + @"\mount & exit";
-                        procOuvrirWIM.StartInfo.ErrorDialog = true;
-                        procOuvrirWIM.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
-                        procOuvrirWIM.Start();
-                        procOuvrirWIM.WaitForExit();
-                    }
-
                     if (rbAMD64.Checked == true)
                     {
                         strChoosed = "amd64";
@@ -211,6 +198,19 @@ namespace WinPE_Creation_Tool
                         procGenererPE.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
                         procGenererPE.Start();
                         procGenererPE.WaitForExit();
+                    }
+
+                    if (tbxLCID.Text != "" || cbxDrivers.Checked == true)
+                    {
+                        Process procOuvrirWIM = new Process();
+                        procOuvrirWIM.StartInfo.FileName = "cmd";
+                        procOuvrirWIM.StartInfo.Verb = "runas";
+                        procOuvrirWIM.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
+                        procOuvrirWIM.StartInfo.Arguments = @"/k Dism /Mount-Image /ImageFile:C:\WinPE_" + strChoosed + @"\media\sources\boot.wim /index:1 /MountDir:C:\WinPE_" + strChoosed + @"\mount & exit";
+                        procOuvrirWIM.StartInfo.ErrorDialog = true;
+                        procOuvrirWIM.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                        procOuvrirWIM.Start();
+                        procOuvrirWIM.WaitForExit();
                     }
 
                     if (Directory.Exists("C:\\WinPE_" + strChoosed))
