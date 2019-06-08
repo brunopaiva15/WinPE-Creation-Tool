@@ -217,7 +217,6 @@ namespace WinPE_Creation_Tool
                     {
                         if (tbxLCID.Text != "")
                         {
-
                             Process procSysLocale = new Process();
                             procSysLocale.StartInfo.FileName = "cmd";
                             procSysLocale.StartInfo.Verb = "runas";
@@ -275,32 +274,6 @@ namespace WinPE_Creation_Tool
                                 procCreerUSB.Start();
                                 procCreerUSB.WaitForExit();
                             }
-                        }
-                    }
-
-                    if (Directory.Exists("C:\\WinPE_" + strChoosed))
-                    {
-                        if (cbxGenerateISO.Checked == true)
-                        {
-                            Process procDeplacerFichier = new Process();
-                            procDeplacerFichier.StartInfo.FileName = "cmd";
-                            procDeplacerFichier.StartInfo.Verb = "runas";
-                            procDeplacerFichier.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
-                            procDeplacerFichier.StartInfo.Arguments = "/k copy " + Directory.GetCurrentDirectory() + @"\oscdimg.exe C:\Windows\System32\ & exit";
-                            procDeplacerFichier.StartInfo.ErrorDialog = true;
-                            procDeplacerFichier.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
-                            procDeplacerFichier.Start();
-                            procDeplacerFichier.WaitForExit();
-
-                            Process procGenereISO = new Process();
-                            procGenereISO.StartInfo.FileName = "cmd";
-                            procGenereISO.StartInfo.Verb = "runas";
-                            procGenereISO.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
-                            procGenereISO.StartInfo.Arguments = "/k " + Directory.GetCurrentDirectory() + "\\MakeWinPEMedia.cmd /iso C:\\WinPE_" + strChoosed + " C:\\WinPe_" + strChoosed + "\\WinPE.iso & exit";
-                            procGenereISO.StartInfo.ErrorDialog = true;
-                            procGenereISO.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
-                            procGenereISO.Start();
-                            procGenereISO.WaitForExit();
                         }
                     }
 
@@ -447,6 +420,32 @@ namespace WinPE_Creation_Tool
                         procFermerWIM.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
                         procFermerWIM.Start();
                         procFermerWIM.WaitForExit();
+                    }
+
+                    if (Directory.Exists("C:\\WinPE_" + strChoosed))
+                    {
+                        if (cbxGenerateISO.Checked == true)
+                        {
+                            Process procDeplacerFichier = new Process();
+                            procDeplacerFichier.StartInfo.FileName = "cmd";
+                            procDeplacerFichier.StartInfo.Verb = "runas";
+                            procDeplacerFichier.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
+                            procDeplacerFichier.StartInfo.Arguments = "/k copy " + Directory.GetCurrentDirectory() + @"\oscdimg.exe C:\Windows\System32\ & exit";
+                            procDeplacerFichier.StartInfo.ErrorDialog = true;
+                            procDeplacerFichier.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                            procDeplacerFichier.Start();
+                            procDeplacerFichier.WaitForExit();
+
+                            Process procGenereISO = new Process();
+                            procGenereISO.StartInfo.FileName = "cmd";
+                            procGenereISO.StartInfo.Verb = "runas";
+                            procGenereISO.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
+                            procGenereISO.StartInfo.Arguments = "/k " + Directory.GetCurrentDirectory() + "\\MakeWinPEMedia.cmd /iso C:\\WinPE_" + strChoosed + " C:\\WinPe_" + strChoosed + "\\WinPE.iso & exit";
+                            procGenereISO.StartInfo.ErrorDialog = true;
+                            procGenereISO.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                            procGenereISO.Start();
+                            procGenereISO.WaitForExit();
+                        }
                     }
 
                     Cursor.Current = Cursors.Default;
