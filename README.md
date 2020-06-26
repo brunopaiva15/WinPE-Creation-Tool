@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/brunopaiva15/winpe-creation-tool/badge)](https://www.codefactor.io/repository/github/brunopaiva15/winpe-creation-tool)
+
 # WinPE Creation Tool
 
 WinPE Creation Tool is a free and open source utility that allows you to create a complete WinPE environment, including a directory, an ISO and a bootable USB key.
