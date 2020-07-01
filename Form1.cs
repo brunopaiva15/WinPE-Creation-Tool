@@ -288,7 +288,6 @@ namespace WinPE_Creation_Tool
                 cbxUSB.ItemHeight = drives.Count;
                 
                 foreach (ManagementObject drive in drives) {
-
                     foreach (ManagementObject partition in new ManagementObjectSearcher(
                     "ASSOCIATORS OF {Win32_DiskDrive.DeviceID='"
                     + drive["DeviceID"]
