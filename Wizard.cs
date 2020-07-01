@@ -98,11 +98,8 @@ namespace WinPE_Creation_Tool
                 if (Directory.Exists(@"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit"))
                 {
                     rbAMD64.Checked = true;
-
                     ManagementObjectCollection drives = new ManagementObjectSearcher("SELECT Caption, DeviceID FROM Win32_DiskDrive WHERE InterfaceType='USB'").Get();
-
                     cbxUSB.ItemHeight = drives.Count;
-
                     foreach (ManagementObject drive in drives)
 
                     {
@@ -118,19 +115,11 @@ namespace WinPE_Creation_Tool
                         + "'} WHERE AssocClass = Win32_DiskDriveToDiskPartition").Get())
 
                         {
-
-                            // browse all USB WMI physical disks
-
                             foreach (ManagementObject disk in new ManagementObjectSearcher(
-
                             "ASSOCIATORS OF {Win32_DiskPartition.DeviceID='"
-
                             + partition["DeviceID"]
-
                             + "'} WHERE AssocClass = Win32_LogicalDiskToPartition").Get())
-
                             {
-
                                 cbxUSB.Items.Add(disk["CAPTION"].ToString());
                             }
                         }
@@ -281,7 +270,6 @@ namespace WinPE_Creation_Tool
                     {
                         if (cbxScript.Checked == true)
                         {
-
                             Process procCreerRepertoireScript = new Process();
                             procCreerRepertoireScript.StartInfo.FileName = "cmd";
                             procCreerRepertoireScript.StartInfo.Verb = "runas";
@@ -390,7 +378,6 @@ namespace WinPE_Creation_Tool
                         {
                             if (tbxDrivers.Text != "")
                             {
-
                                 string[] lines = tbxDrivers.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
                                 foreach (string l in lines)
@@ -478,31 +465,16 @@ namespace WinPE_Creation_Tool
                 foreach (ManagementObject drive in drives)
 
                 {
-
-                    // browse all USB WMI physical disks
-
                     foreach (ManagementObject partition in new ManagementObjectSearcher(
-
                     "ASSOCIATORS OF {Win32_DiskDrive.DeviceID='"
-
                     + drive["DeviceID"]
-
                     + "'} WHERE AssocClass = Win32_DiskDriveToDiskPartition").Get())
-
                     {
-
-                        // browse all USB WMI physical disks
-
                         foreach (ManagementObject disk in new ManagementObjectSearcher(
-
                         "ASSOCIATORS OF {Win32_DiskPartition.DeviceID='"
-
                         + partition["DeviceID"]
-
                         + "'} WHERE AssocClass = Win32_LogicalDiskToPartition").Get())
-
                         {
-
                             cbxUSB.Items.Add(disk["CAPTION"].ToString());
                         }
                     }
