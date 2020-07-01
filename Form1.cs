@@ -43,46 +43,24 @@ namespace WinPE_Creation_Tool
         {
             try
             {
-         
-
                 MessageBox.Show("Before using this utility, make sure you have the deployment tools and the WinPE pre-installation environment.\n\nNote : It's essential to have Windows 10 installed on this computer in order for this utility to work.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                if (Directory.Exists(@"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit"))
-                {
+                if (Directory.Exists(@"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit")) {
                 cbxArchitecture.SelectedItem = "amd64";
-
                 ManagementObjectCollection drives = new ManagementObjectSearcher("SELECT Caption, DeviceID FROM Win32_DiskDrive WHERE InterfaceType='USB'").Get();
-
                 cbxUSB.ItemHeight = drives.Count;
 
-                foreach (ManagementObject drive in drives)
-
-                {
-
-                    // browse all USB WMI physical disks
-
+                foreach (ManagementObject drive in drives) {
                     foreach (ManagementObject partition in new ManagementObjectSearcher(
-
                     "ASSOCIATORS OF {Win32_DiskDrive.DeviceID='"
-
                     + drive["DeviceID"]
-
                     + "'} WHERE AssocClass = Win32_DiskDriveToDiskPartition").Get())
-
                     {
-
-                        // browse all USB WMI physical disks
-
                         foreach (ManagementObject disk in new ManagementObjectSearcher(
-
                         "ASSOCIATORS OF {Win32_DiskPartition.DeviceID='"
-
                         + partition["DeviceID"]
-
                         + "'} WHERE AssocClass = Win32_LogicalDiskToPartition").Get())
-
                         {
-
                             cbxUSB.Items.Add(disk["CAPTION"].ToString());
                         }
                     }
@@ -91,26 +69,6 @@ namespace WinPE_Creation_Tool
                 else
                 {
                  MessageBox.Show(@"WARNING. You need to install Windows ADK to use WinPE Creation Tool. https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install");
-
-            //    System.Diagnostics.Process[] process = System.Diagnostics.Process.GetProcessesByName("cmd");
-            //    foreach (System.Diagnostics.Process p in process)
-            //    {
-            //        if (!string.IsNullOrEmpty(p.ProcessName))
-            //        {
-            //            p.Kill();
-            //        }
-            //    }
-
-            //    System.Diagnostics.Process[] process1 = System.Diagnostics.Process.GetProcessesByName("Dism");
-            //    foreach (System.Diagnostics.Process p in process1)
-            //    {
-            //        if (!string.IsNullOrEmpty(p.ProcessName))
-            //        {
-            //            p.Kill();
-            //        }
-            //    }
-
-            //    Process.GetCurrentProcess().Kill();
             }
         }
             catch
@@ -205,7 +163,6 @@ namespace WinPE_Creation_Tool
             {
                 if (Directory.Exists("C:\\WinPE_" + cbxArchitecture.Text))
                 {
-
                     Cursor.Current = Cursors.WaitCursor;
 
                     btnGenererISO.Text = "Generation in progress";
@@ -318,7 +275,6 @@ namespace WinPE_Creation_Tool
 
         private void cbxUSB_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void cbxUSB_DropDown(object sender, EventArgs e)
@@ -326,39 +282,23 @@ namespace WinPE_Creation_Tool
             try
             {
                 cbxUSB.Items.Clear();
-
+                
                 ManagementObjectCollection drives = new ManagementObjectSearcher("SELECT Caption, DeviceID FROM Win32_DiskDrive WHERE InterfaceType='USB'").Get();
-
+                
                 cbxUSB.ItemHeight = drives.Count;
-
-                foreach (ManagementObject drive in drives)
-
-                {
-
-                    // browse all USB WMI physical disks
+                
+                foreach (ManagementObject drive in drives) {
 
                     foreach (ManagementObject partition in new ManagementObjectSearcher(
-
                     "ASSOCIATORS OF {Win32_DiskDrive.DeviceID='"
-
                     + drive["DeviceID"]
-
                     + "'} WHERE AssocClass = Win32_DiskDriveToDiskPartition").Get())
-
                     {
-
-                        // browse all USB WMI physical disks
-
                         foreach (ManagementObject disk in new ManagementObjectSearcher(
-
                         "ASSOCIATORS OF {Win32_DiskPartition.DeviceID='"
-
                         + partition["DeviceID"]
-
                         + "'} WHERE AssocClass = Win32_LogicalDiskToPartition").Get())
-
                         {
-
                             cbxUSB.Items.Add(disk["CAPTION"].ToString());
                         }
                     }
