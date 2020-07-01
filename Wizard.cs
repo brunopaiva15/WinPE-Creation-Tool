@@ -100,20 +100,11 @@ namespace WinPE_Creation_Tool
                     rbAMD64.Checked = true;
                     ManagementObjectCollection drives = new ManagementObjectSearcher("SELECT Caption, DeviceID FROM Win32_DiskDrive WHERE InterfaceType='USB'").Get();
                     cbxUSB.ItemHeight = drives.Count;
-                    foreach (ManagementObject drive in drives)
-
-                    {
-
-                        // browse all USB WMI physical disks
-
+                    foreach (ManagementObject drive in drives) {
                         foreach (ManagementObject partition in new ManagementObjectSearcher(
-
                         "ASSOCIATORS OF {Win32_DiskDrive.DeviceID='"
-
                         + drive["DeviceID"]
-
                         + "'} WHERE AssocClass = Win32_DiskDriveToDiskPartition").Get())
-
                         {
                             foreach (ManagementObject disk in new ManagementObjectSearcher(
                             "ASSOCIATORS OF {Win32_DiskPartition.DeviceID='"
